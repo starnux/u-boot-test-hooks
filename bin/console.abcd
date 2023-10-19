@@ -1,0 +1,41 @@
+# Copyright (c) 2023 Neil Armstrong All rights reserved.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+# DEALINGS IN THE SOFTWARE.
+#
+#
+# Requires the following variables:
+# - boot_fip_dir: path to a clone of https://github.com/LibreELEC/amlogic-boot-fip
+# - boot_fip_board: board name used to pass to build-fip.sh, e.g. "lepotato"
+# - abcd_binary: path to the "abcd" binary installed from https://github.com/starnux/abcd
+# - abcd_host: SSH destination URL to reach the abcd-server, e.g. ssh://user@server:port
+# - abcd_board: abcd board name, you can get with `abcd -h ssh://user@server:port -l`
+#
+# Optional variables:
+# - abcd_extra_args: abcd extra arguments if needed
+#
+
+FIP_DIR=`mktemp -d`
+
+pushd ${boot_fip_dir}
+./build-fip.sh ${boot_fip_board} ${U_BOOT_BUILD_DIR}/u-boot.bin ${FIP_DIR}
+cp ${FIP_DIR}/u-boot.bin ${U_BOOT_BUILD_DIR}/u-boot.bin.abcd
+popd
+rm -rf ${FIP_DIR}
+
+exec "${abcd_binary}" -h ${abcd_host} -b ${abcd_board} ${abcd_extra_args} ${U_BOOT_BUILD_DIR}/u-boot.bin.abcd
