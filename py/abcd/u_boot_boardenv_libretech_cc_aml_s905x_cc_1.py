@@ -24,13 +24,13 @@ env__mmc_rd_configs = (
 )
 
 env__mmc_wr_configs = (
-    {
-        "fixture_id": "sd",
-        "is_emmc": False,
-        "devid": 0,
-        "partid": None,
-        "sector": 0x1000,
-        "count": 1000,
+     {
+        'fixture_id': 'emmc-data',
+        'is_emmc': True,
+        'devid': 1,
+        'partid': 0,
+        'sector': 0x100,
+        'count': 0x1000,
         "test_iterations": 50,
     },
 )
@@ -48,3 +48,41 @@ env__gpio_dev_config = {
         'gpio_clear_value': 'value is 0',
         'gpio_set_value': 'value is 1',
 }
+
+env__net_dhcp_server = True
+
+env__net_tftp_readable_file = {
+	"fn": "grubaa64.efi",
+	"size": 4288512,
+	"crc32": "c79bc066",
+}
+
+env__efi_loader_helloworld_file = {
+	'fn': 'helloworld.efi',
+	'size': 12720,
+	'crc32': 'b6fd8a74',
+	'addr': 0x08080000,
+}
+
+env__efi_loader_grub_file = {
+	"fn": "grubaa64.efi",
+	"size": 4288512,
+	"crc32": "c79bc066",
+	'addr': 0x08080000,
+}
+
+env__amlogic_usb_dev_ports = (
+    {
+        'fixture_id': 'micro_b',
+        'tgt_usb_ctlr': '0',
+    },
+)
+
+env__amlogic_block_devs = (
+    {
+        'fixture_id': 'sd',
+        'type': 'mmc',
+        'id': '0'
+    },
+)
+
