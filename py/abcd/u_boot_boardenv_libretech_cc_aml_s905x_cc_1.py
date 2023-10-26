@@ -24,13 +24,13 @@ env__mmc_rd_configs = (
 )
 
 env__mmc_wr_configs = (
-     {
-        'fixture_id': 'emmc-data',
-        'is_emmc': True,
-        'devid': 1,
-        'partid': 0,
-        'sector': 0x100,
-        'count': 0x1000,
+    {
+        "fixture_id": "sd",
+        "is_emmc": False,
+        "devid": 0,
+        "partid": None,
+        "sector": 0x1000,
+        "count": 1000,
         "test_iterations": 50,
     },
 )
