@@ -1,10 +1,11 @@
+# TODO: eMMC
 env__mmc_dev_configs = (
     {
         'fixture_id': 'sd',
         'is_emmc': False,
         'devid': 0,
         'partid': None,
-        'info_device': 'mmc@72000',
+        'info_device': 'sd@ffe05000',
         'info_speed': '50000000',
         'info_mode': 'SD High Speed (50MHz)',
         'info_buswidth': '4-bit',
@@ -19,7 +20,7 @@ env__mmc_rd_configs = (
         'partid': None,
         'sector': 0,
         'count': 100,
-        'crc32': 'bfbeb86e',
+        'crc32': 'aa09557e',
     },
 )
 
@@ -49,27 +50,28 @@ env__gpio_dev_config = {
         'gpio_set_value': 'value is 1',
 }
 
-env__net_dhcp_server = True
+# TODO fix network
+# env__net_dhcp_server = True
 
-env__net_tftp_readable_file = {
-	"fn": "grubaa64.efi",
-	"size": 4288512,
-	"crc32": "c79bc066",
-}
+#env__net_tftp_readable_file = {
+#	"fn": "grubaa64.efi",
+#	"size": 4288512,
+#	"crc32": "c79bc066",
+#}
 
-env__efi_loader_helloworld_file = {
-	'fn': 'helloworld.efi',
-	'size': 12720,
-	'crc32': 'b6fd8a74',
-	'addr': 0x08080000,
-}
+#env__efi_loader_helloworld_file = {
+#	'fn': 'helloworld.efi',
+#	'size': 12720,
+#	'crc32': 'b6fd8a74',
+#	'addr': 0x08080000,
+#}
 
-env__efi_loader_grub_file = {
-	"fn": "grubaa64.efi",
-	"size": 4288512,
-	"crc32": "c79bc066",
-	'addr': 0x08080000,
-}
+#env__efi_loader_grub_file = {
+#	"fn": "grubaa64.efi",
+#	"size": 4288512,
+#	"crc32": "c79bc066",
+#	'addr': 0x08080000,
+#}
 
 env__amlogic_usb_dev_ports = (
     {

@@ -1,10 +1,11 @@
+# TODO: eMMC
 env__mmc_dev_configs = (
     {
         'fixture_id': 'sd',
         'is_emmc': False,
         'devid': 0,
         'partid': None,
-        'info_device': 'mmc@72000',
+        'info_device': 'sd@ffe05000',
         'info_speed': '50000000',
         'info_mode': 'SD High Speed (50MHz)',
         'info_buswidth': '4-bit',
@@ -19,7 +20,7 @@ env__mmc_rd_configs = (
         'partid': None,
         'sector': 0,
         'count': 100,
-        'crc32': 'bfbeb86e',
+        'crc32': 'aa09557e',
     },
 )
 
@@ -40,8 +41,8 @@ env__mmc_wr_configs = (
 # gets a gpio at 1 (AO2) and a gpio a 0 (AO3)
 env__gpio_dev_config = {
         'gpio_str_count':2 ,
-        'gpio_str_1': 'aobus-banks9',
-        'gpio_str_2': 'periphs-banks99',
+        'gpio_str_1': 'aobus-banks14',
+        'gpio_str_2': 'periphs-banks84',
         'gpio_op_pin': 'aobus-banks2',
         'gpio_ip_pin_set':'aobus-banks2',
         'gpio_ip_pin_clear':'aobus-banks3',

@@ -1,39 +1,4 @@
-env__mmc_dev_configs = (
-    {
-        'fixture_id': 'sd',
-        'is_emmc': False,
-        'devid': 0,
-        'partid': None,
-        'info_device': 'mmc@72000',
-        'info_speed': '50000000',
-        'info_mode': 'SD High Speed (50MHz)',
-        'info_buswidth': '4-bit',
-    },
-)
-
-env__mmc_rd_configs = (
-    {
-        'fixture_id': 'sd',
-        'is_emmc': False,
-        'devid': 0,
-        'partid': None,
-        'sector': 0,
-        'count': 100,
-        'crc32': 'bfbeb86e',
-    },
-)
-
-env__mmc_wr_configs = (
-    {
-        "fixture_id": "sd",
-        "is_emmc": False,
-        "devid": 0,
-        "partid": None,
-        "sector": 0x1000,
-        "count": 1000,
-        "test_iterations": 50,
-    },
-)
+# TODO: add eMMC to the board and add the tests
 
 # checks max gpios on both bank
 # toggles the led gpio
@@ -71,18 +36,19 @@ env__efi_loader_grub_file = {
 	'addr': 0x08080000,
 }
 
-env__amlogic_usb_dev_ports = (
-    {
-        'fixture_id': 'micro_b',
-        'tgt_usb_ctlr': '0',
-    },
-)
+# TODO: add eMMC to board
+#env__amlogic_usb_dev_ports = (
+#    {
+#        'fixture_id': 'micro_b',
+#        'tgt_usb_ctlr': '0',
+#    },
+#)
 
-env__amlogic_block_devs = (
-    {
-        'fixture_id': 'sd',
-        'type': 'mmc',
-        'id': '0'
-    },
-)
-
+#env__amlogic_block_devs = (
+#    {
+#        'fixture_id': 'sd',
+#        'type': 'mmc',
+#        'id': '0'
+#    },
+#)
+#
