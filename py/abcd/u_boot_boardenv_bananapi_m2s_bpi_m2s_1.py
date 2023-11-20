@@ -20,7 +20,7 @@ env__mmc_rd_configs = (
         'partid': None,
         'sector': 0,
         'count': 100,
-        'crc32': 'aa09557e',
+        'crc32': '00000000',
     },
 )
 
