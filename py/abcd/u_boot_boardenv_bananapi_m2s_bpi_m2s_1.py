@@ -97,8 +97,8 @@ env__mmc_wr_configs = (
 # gets a gpio at 1 (AO2) and a gpio a 0 (AO3)
 env__gpio_dev_config = {
         'gpio_str_count':2 ,
-        'gpio_str_1': 'aobus-banks9',
-        'gpio_str_2': 'periphs-banks99',
+        'gpio_str_1': 'aobus-banks14',
+        'gpio_str_2': 'periphs-banks84',
         'gpio_op_pin': 'aobus-banks2',
         'gpio_ip_pin_set':'aobus-banks2',
         'gpio_ip_pin_clear':'aobus-banks3',
