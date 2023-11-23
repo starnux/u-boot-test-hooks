@@ -19,7 +19,7 @@ env__mmc_rd_configs = (
         'partid': None,
         'sector': 0,
         'count': 100,
-        'crc32': 'bfbeb86e',
+        'crc32': '4add3ed4',
     },
 )
 
@@ -29,7 +29,7 @@ env__mmc_wr_configs = (
         "is_emmc": False,
         "devid": 0,
         "partid": None,
-        "sector": 0x1000,
+        "sector": 0x200000, # 1GiB
         "count": 1000,
         "test_iterations": 50,
     },

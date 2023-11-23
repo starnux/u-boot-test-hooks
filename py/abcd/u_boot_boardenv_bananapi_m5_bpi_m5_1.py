@@ -1,4 +1,3 @@
-# TODO: eMMC
 env__mmc_dev_configs = (
     {
         'fixture_id': 'sd',
@@ -10,6 +9,36 @@ env__mmc_dev_configs = (
         'info_mode': 'SD High Speed (50MHz)',
         'info_buswidth': '4-bit',
     },
+    {
+        'fixture_id': 'mmc',
+        'is_emmc': True,
+        'devid': 1,
+        'partid': 0,
+        'info_device': 'mmc@ffe07000',
+        'info_speed': '52000000',
+        'info_mode': 'MMC High Speed (52MHz)',
+        'info_buswidth': '8-bit',
+    },
+    {
+        'fixture_id': 'mmc',
+        'is_emmc': True,
+        'devid': 1,
+        'partid': 1,
+        'info_device': 'mmc@ffe07000',
+        'info_speed': '52000000',
+        'info_mode': 'MMC High Speed (52MHz)',
+        'info_buswidth': '8-bit',
+    },
+    {
+        'fixture_id': 'mmc',
+        'is_emmc': True,
+        'devid': 1,
+        'partid': 2,
+        'info_device': 'mmc@ffe07000',
+        'info_speed': '52000000',
+        'info_mode': 'MMC High Speed (52MHz)',
+        'info_buswidth': '8-bit',
+    },
 )
 
 env__mmc_rd_configs = (
@@ -20,7 +49,7 @@ env__mmc_rd_configs = (
         'partid': None,
         'sector': 0,
         'count': 100,
-        'crc32': '00000000',
+        'crc32': '4add3ed4',
     },
 )
 
@@ -30,7 +59,34 @@ env__mmc_wr_configs = (
         "is_emmc": False,
         "devid": 0,
         "partid": None,
-        "sector": 0x1000,
+        "sector": 0x200000, # 1GiB
+        "count": 1000,
+        "test_iterations": 50,
+    },
+    {
+        "fixture_id": "mmc",
+        "is_emmc": True,
+        "devid": 1,
+        "partid": 0,
+        "sector": 0x0,
+        "count": 1000,
+        "test_iterations": 50,
+    },
+    {
+        "fixture_id": "mmc",
+        "is_emmc": True,
+        "devid": 1,
+        "partid": 1,
+        "sector": 0x0,
+        "count": 1000,
+        "test_iterations": 50,
+    },
+    {
+        "fixture_id": "mmc",
+        "is_emmc": True,
+        "devid": 1,
+        "partid": 2,
+        "sector": 0x0,
         "count": 1000,
         "test_iterations": 50,
     },
