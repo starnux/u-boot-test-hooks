@@ -18,8 +18,8 @@ env__mmc_rd_configs = (
         'devid': 0,
         'partid': None,
         'sector': 0,
-        'count': 100,
-        'crc32': '4add3ed4',
+        'count': 4096,
+        'crc32': '2d63e439',
     },
 )
 
