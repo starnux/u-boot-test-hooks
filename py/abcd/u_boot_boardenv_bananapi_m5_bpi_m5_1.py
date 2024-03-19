@@ -4,7 +4,8 @@ env__mmc_dev_configs = (
         'is_emmc': False,
         'devid': 0,
         'partid': None,
-        'info_device': '@ffe05000',
+	# node name has changed upstream, ignore
+        'info_device': '',
         'info_speed': '50000000',
         'info_mode': 'SD High Speed (50MHz)',
         'info_buswidth': '4-bit',
