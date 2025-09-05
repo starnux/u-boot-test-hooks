@@ -52,3 +52,5 @@ env__efi_loader_grub_file = {
 #    },
 #)
 #
+
+env__spl_skipped = True

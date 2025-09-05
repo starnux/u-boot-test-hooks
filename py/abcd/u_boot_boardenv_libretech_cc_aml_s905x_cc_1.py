@@ -86,3 +86,4 @@ env__amlogic_block_devs = (
     },
 )
 
+env__spl_skipped = True

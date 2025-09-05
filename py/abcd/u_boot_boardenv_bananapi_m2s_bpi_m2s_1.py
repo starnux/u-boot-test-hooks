@@ -143,4 +143,5 @@ env__amlogic_block_devs = (
         'id': '0'
     },
 )
+env__spl_skipped = True
 
