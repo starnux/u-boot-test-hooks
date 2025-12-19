@@ -5,7 +5,7 @@ env__mmc_dev_configs = (
         'devid': 0,
         'partid': None,
         'info_device': 'mmc@72000',
-        'info_speed': '50000000',
+        'info_speed': '',
         'info_mode': 'SD High Speed (50MHz)',
         'info_buswidth': '4-bit',
     },
