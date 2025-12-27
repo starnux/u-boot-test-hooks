@@ -7,7 +7,7 @@ env__mmc_dev_configs = (
 	# node name has changed upstream, ignore
         'info_device': '',
         'info_speed': '',
-        'info_mode': 'SD High Speed',
+        'info_mode': '',
         'info_buswidth': '4-bit',
     },
     {
