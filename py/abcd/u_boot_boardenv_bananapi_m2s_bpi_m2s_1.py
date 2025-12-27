@@ -7,7 +7,7 @@ env__mmc_dev_configs = (
 	# node name has changed upstream, ignore
         'info_device': '',
         'info_speed': '',
-        'info_mode': 'SD High Speed (50MHz)',
+        'info_mode': 'SD High Speed',
         'info_buswidth': '4-bit',
     },
     {
@@ -17,7 +17,7 @@ env__mmc_dev_configs = (
         'partid': 0,
         'info_device': 'mmc@ffe07000',
         'info_speed': '',
-        'info_mode': 'MMC High Speed (52MHz)',
+        'info_mode': 'MMC High Speed',
         'info_buswidth': '8-bit',
     },
     {
@@ -27,7 +27,7 @@ env__mmc_dev_configs = (
         'partid': 1,
         'info_device': 'mmc@ffe07000',
         'info_speed': '',
-        'info_mode': 'MMC High Speed (52MHz)',
+        'info_mode': 'MMC High Speed',
         'info_buswidth': '8-bit',
     },
     {
@@ -37,7 +37,7 @@ env__mmc_dev_configs = (
         'partid': 2,
         'info_device': 'mmc@ffe07000',
         'info_speed': '',
-        'info_mode': 'MMC High Speed (52MHz)',
+        'info_mode': 'MMC High Speed',
         'info_buswidth': '8-bit',
     },
 )
